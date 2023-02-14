@@ -1,20 +1,7 @@
 #----------------------------------------
-# Variables set in setup_environment.sh
-#   - name_of_system
-#   - HIPFLAGS
-#----------------------------------------
 
-ifndef name_of_system
-$(error name_of_system is not set)
-else
-$(info Current system: $(name_of_system))
-endif
-
-#----------------------------------------
-
-HIPCC = hipcc
-
-HIPFLAGS +=
+HIPCC    = hipcc
+HIPFLAGS = --offload-arch=gfx90a
 
 #----------------------------------------
 
